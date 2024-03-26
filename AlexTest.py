@@ -37,3 +37,21 @@ class testData(unittest.TestCase):
         raw = raw.resample(sfreq_resample)
         self.assertNoLogs(mne.find_events(raw, stim_channel="STI 014"))
         
+    def testEEG1(self):
+        data_path = sample.data_path()
+        raw_fname = data_path / 'MEG' / 'sample' / 'sample_audvis_filt-0-40_raw.fif'
+        raw = mne.io.read_raw_fif(raw_fname, preload=True)
+        l_freq, h_freq = 1, 30
+        raw.filter(l_freq, h_freq, method='fir', fir_design='firwin')
+        sfreq_resample = 480
+        raw = raw.resample(sfreq_resample)
+        events = mne.find_events(raw, stim_channel="STI 014")
+        event_id = 'LA'
+
+        # set path to save data
+        path = './data/real_data/'
+        if not os.path.exists(path):
+            os.makedirs(path)
+        # fig_name = path + 'evoked_eeg_'+str(event_id)+'.png'
+        # mat_name = path + 'evoked_eeg_'+str(event_id)+'.mat'
+        self.assertNoLogs(path + 'evoked_eeg_'+str(event_id)+'.png')
