@@ -17,3 +17,6 @@ In sprint 2 we now want to apply our algorithims for data processing and visuali
 To do this we take the data and process it through the normalization and reshaping functions.
 We then use this data to being visualization in the next sprint.
 These files can be found in the main repo.
+
+
+![image](https://github.com/msavino16/SSW555-Group22/assets/149920321/a43fa80b-a314-43ed-9785-a49ebfb32d41)
