@@ -93,8 +93,7 @@ class TestMaxMinNormalizeNegative(unittest.TestCase):
         result = max_min_normalize(data)
         self.assertTrue(np.allclose(result, expected_result), "Normalization failed for negative values")
 
-if __name__ == '__main__':
-    unittest.main()
+
 
 class testData(unittest.TestCase):
     def testNormalize(self):
@@ -193,4 +192,6 @@ class testData(unittest.TestCase):
         raw.info['bads'] = ['MEG 2443', 'EEG 053']
         baseline = (None, 0)  # means from the first instant to t = 0
         self.assertNoLogs(dict(grad=4000e-13, mag=4e-12, eog=150e-6))
- 
+
+if __name__ == '__main__':
+    unittest.main()
