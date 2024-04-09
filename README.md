@@ -18,5 +18,12 @@ To do this we take the data and process it through the normalization and reshapi
 We then use this data to being visualization in the next sprint.
 These files can be found in the main repo.
 
+Sprint 3:
+In sprint 3 we now plan our UI elements, continue testing, and implement our 3d visualization system.
+To do this we take our processed data and pass it through the brain3d function, which utilizes MNE Visualization tools to visualzie our data.
+We then plan to have this visualization accessible through a UI that we are currently planning.
+This sets us up for our final goal of having a UI integrated tool for brain visualization, that allows the user to both view brain data and upload brain data files to be visualized.
+The updated files can be found in the main repo.
+
 
 ![image](https://github.com/msavino16/SSW555-Group22/assets/149920321/a43fa80b-a314-43ed-9785-a49ebfb32d41)
