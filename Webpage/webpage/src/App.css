@@ -1,0 +1,81 @@
+/* General reset and box-sizing setup */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #e6e6e6; /* A light gray background */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Ensures the container is not too wide */
+}
+
+.title {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+
+.generateButton {
+  background-color: #f9d423;
+  background-image: linear-gradient(45deg, #f9d423 0%, #ff4e50 100%);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  border-radius: 50px; /* Fully rounded corners for a pill shape */
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  letter-spacing: 1px;
+}
+
+.generateButton:hover {
+  transform: scale(1.05); /* Slightly enlarges button on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.generateButton:active {
+  transform: scale(0.95); /* Slightly shrinks button when clicked */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .title {
+    font-size: 32px;
+    padding: 25px 50px;
+  }
+
+  .generateButton {
+    font-size: 22px;
+    padding: 20px 40px;
+  }
+}
