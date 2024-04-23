@@ -93,7 +93,23 @@ class TestMaxMinNormalizeNegative(unittest.TestCase):
         result = max_min_normalize(data)
         self.assertTrue(np.allclose(result, expected_result), "Normalization failed for negative values")
 
+class TestLoadResult(unittest.TestCase):
+    def load_result(task, result_path):
+        if not isinstance(task, str):
+            raise Exception("Oops! That was not a valid type for task. Try type a 'str'!")
 
+        if not task in ['LA', 'RA', 'LV', 'RV']: 
+            raise Exception("Oops! That was not a valid task. Try use 'LA', 'RA', 'LV' or 'RV'!")
+        else:
+            print("load result for task: {}".format(task))
+            fname = result_path + '/sample/Test_result_evoked_' + str(task) + '.mat'
+            dataset = sio.loadmat(fname)
+            s_pred = dataset['s_pred']
+            s_pred = np.absolute(s_pred)
+            if s_pred.shape[0]!=1984:
+                s_pred = s_pred.T
+   
+        return s_pred
 
 class testData(unittest.TestCase):
     def testNormalize(self):
