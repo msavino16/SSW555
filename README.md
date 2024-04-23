@@ -27,3 +27,15 @@ The updated files can be found in the main repo.
 
 
 ![image](https://github.com/msavino16/SSW555-Group22/assets/149920321/a43fa80b-a314-43ed-9785-a49ebfb32d41)
+
+Sprint 4:
+In sprint 4 we now finalize all of our code elements, continue testing, and develop a website to host our data visualization.
+To do this we are using a server to host our website, that will take our jupyter notebooks that provide our visualization, and make them HTML friendly.
+We are attempting to use a flask server for this, and dsopajdiajwidjawd
+dsadasdasdsa
+asd
+asas
+das
+a
+das
+asasa
