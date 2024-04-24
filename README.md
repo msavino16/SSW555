@@ -30,12 +30,7 @@ The updated files can be found in the main repo.
 
 Sprint 4:
 In sprint 4 we now finalize all of our code elements, continue testing, and develop a website to host our data visualization.
-To do this we are using a server to host our website, that will take our jupyter notebooks that provide our visualization, and make them HTML friendly.
-We are attempting to use a flask server for this, and dsopajdiajwidjawd
-dsadasdasdsa
-asd
-asas
-das
-a
-das
-asasa
+To do this we are using a server to host our website, that will take our jupyter notebooks that provide our visualization, and make them available to be seen with a UI online.
+We are attempting to use a flask server for this, as it can host a python server for us to use as our website base
+We then develop a UI using basic CSS and React, so that the page may be interacted with
+The updated code can be found in the main repo.
