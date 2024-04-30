@@ -36,11 +36,7 @@ def run_notebook():
 
             # Set up a notebook processor and execute the notebook
             ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
-            ep.preprocess(nb, {'metadata': {'path': './'}})  # Adjust the path if your notebook uses files from specific paths
-
-            # Save the executed notebook
-            with open('main_executed.ipynb', 'wt') as f:
-                nbformat.write(nb, f)
+            ep.preprocess(nb, {'metadata': {'path': './'}}) # Adjust the path if your notebook uses files from specific paths
             
             # Delete the uploaded file
             os.remove(file_path)
