@@ -15,6 +15,7 @@ function App() {
       <form>
       <label for="file">File</label>
       <input id="file" type="file" />
+      <input type="submit"/>
       </form>
       <button className="generateButton" onClick={handleRunNotebook}>
         Generate Pop-Up Imaging
