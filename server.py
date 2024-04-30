@@ -41,8 +41,11 @@ def run_notebook():
             # Save the executed notebook
             with open('main_executed.ipynb', 'wt') as f:
                 nbformat.write(nb, f)
+            
+            # Delete the uploaded file
+            os.remove(file_path)
 
-            return 'Notebook executed successfully!'
+            return 'Success!'
     except Exception as e:
         # Return the error message and a 500 Internal Server Error status
         return str(e), 500
